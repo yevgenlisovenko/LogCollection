@@ -9,10 +9,16 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class LogCollectionResponse {
 
+    private final int count;
     private final List<Log> logs;
 
     public LogCollectionResponse(List<Log> logs) {
+        this.count = logs == null ? 0 : logs.size();
         this.logs = logs;
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public List<Log> getLogs() {
@@ -22,7 +28,8 @@ public class LogCollectionResponse {
     @Override
     public String toString() {
         return "LogCollectionResponse{" +
-                "logs=" + logs +
+                "count=" + count +
+                ", logs=" + logs +
                 '}';
     }
 }

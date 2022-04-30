@@ -10,7 +10,7 @@ public class Regex implements Predicate<Log> {
     private Pattern pattern;
 
     public Regex(String filter) {
-        Pattern pattern = Pattern.compile(filter);
+        pattern = Pattern.compile(filter);
     }
 
     @Override

@@ -3,11 +3,11 @@ package com.yevgen.logcollection.service.impl;
 import com.yevgen.logcollection.exception.FileNotFoundException;
 import com.yevgen.logcollection.exception.FileReadException;
 import com.yevgen.logcollection.filtering.FilterFactory;
+import com.yevgen.logcollection.io.LogReaderFactory;
+import com.yevgen.logcollection.io.logReader.ILogReader;
 import com.yevgen.logcollection.model.Log;
 import com.yevgen.logcollection.model.request.FilterRequest;
 import com.yevgen.logcollection.service.ILogCollectionService;
-import org.apache.commons.io.Charsets;
-import org.apache.commons.io.input.ReversedLinesFileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -29,17 +28,11 @@ public class LogCollectionService implements ILogCollectionService {
     @Autowired
     private FilterFactory filterFactory;
 
-    @Value("{log-collection.path}")
+    @Autowired
+    private LogReaderFactory logReaderFactory;
+
+    @Value("${log-collection.path:/var/log}")
     private String path;
-
-    @Value("{log-collection.file-reader.buffer-size:4096}")
-    private Integer bufferSize;
-
-    @Value("{log-collection.file-reader.encoding:4096}")
-    private String encoding;
-
-    @Value("{log-collection.file-reader.column-separator}")
-    private String columnSeparator;
 
     @Override
     public List<Log> getLogs(String filename, Integer limit, FilterRequest filterRequest) {
@@ -59,20 +52,18 @@ public class LogCollectionService implements ILogCollectionService {
 
     private List<Log> readFromFile(File file, Integer limit, Predicate<Log> filter) {
         try {
-            ReversedLinesFileReader fileReader =
-                    new ReversedLinesFileReader(file, bufferSize, Charsets.toCharset(encoding));
+            ILogReader fileReader = logReaderFactory.getReader(file);
 
             List<Log> logs = new ArrayList<>();
 
             int i = 0;
             while (limit == null || i < limit) {
-                String line = fileReader.readLine();
-                if (line == null) {  // means we reached beginning of the file
+                Log log = fileReader.readLog();
+                if (log == null) {  // means we reached beginning of the file
                     break;
                 }
 
-                Log log = parseLine(line);
-                if (filter.test(log)) {
+                if (filter == null || filter.test(log)) {
                     logs.add(log);
                     i++;
                 }
@@ -85,26 +76,6 @@ public class LogCollectionService implements ILogCollectionService {
         } catch (Exception e) {
             throw new FileReadException(file.getName(), e);
         }
-    }
-
-    private Log parseLine(String line) {
-        Log log = null;
-        try {
-            String[] columns = line.split(columnSeparator);
-            if (columns.length < Log.LOG_COLUMNS_COUNT) {
-                logger.warn("Skip line due to column count: " + line);
-            }
-            else {
-                log = new Log(
-                        LocalDateTime.parse(columns[0]),
-                        columns[1],
-                        columns[2]);
-            }
-        }
-        catch (Exception e) {
-            logger.warn("Unable to parse log: " + line);
-        }
-        return log;
     }
 
 }

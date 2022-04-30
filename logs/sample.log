@@ -1,0 +1,53 @@
+2022-04-29 19:58:12.163|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 19:58:12.304|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 19:58:12.306|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 19:58:12.384|INFO|Usb Host Notification hostNotificationUSBDeviceRemoved Apple Internal Keyboard / Trackpad(unseen product name) seqNum 448 Total -1343
+2022-04-29 19:58:13.426|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 19:58:37.522|INFO|Apple80211Set:10289 Processing APPLE80211_IOC_ROAM
+2022-04-29 19:58:37.522|INFO|Apple80211Set:10303 Processing APPLE80211_IOC_ROAM dataRef:0x7f9f4fac2560
+2022-04-29 19:58:37.522|INFO|Apple80211Set:10324 CFType is CFData
+2022-04-29 20:02:50.190|INFO|<airport[227]> airportdProcessDLILEvent: <en0> event=1, flags=0xFFFF8863, lastPowerPref=on
+2022-04-29 20:02:50.190|INFO|<airport[227]> airportdProcessDLILEvent: en0 marked UP, applying user power preferences (ON).
+2022-04-29 20:02:50.190|INFO|<airport[227]> airportdProcessDLILEvent: <en0> Setting power ON
+2022-04-29 20:02:50.201|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:02:50.348|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:02:50.349|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:02:50.382|INFO|Usb Host Notification hostNotificationUSBDeviceRemoved Apple Internal Keyboard / Trackpad(unseen product name) seqNum 448 Total -1344
+2022-04-29 20:02:50.387|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:02:50.387|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:03:11.557|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:03:14.266|INFO|Apple80211Set:10289 Processing APPLE80211_IOC_ROAM
+2022-04-29 20:03:14.267|INFO|Apple80211Set:10303 Processing APPLE80211_IOC_ROAM dataRef:0x7f9f61a2cd60
+2022-04-29 20:03:14.267|INFO|Apple80211Set:10324 CFType is CFData
+2022-04-29 20:08:39.145|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:08:39.338|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:08:39.339|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:08:39.395|INFO|Usb Host Notification hostNotificationUSBDeviceRemoved Apple Internal Keyboard / Trackpad(unseen product name) seqNum 448 Total -1345
+2022-04-29 20:08:40.415|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:09:04.530|INFO|Apple80211Set:10289 Processing APPLE80211_IOC_ROAM
+2022-04-29 20:09:04.531|INFO|Apple80211Set:10303 Processing APPLE80211_IOC_ROAM dataRef:0x7f9f5fb198d0
+2022-04-29 20:09:04.531|INFO|Apple80211Set:10324 CFType is CFData
+2022-04-29 20:33:37.207|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:33:37.389|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:33:37.389|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:33:37.419|INFO|Usb Host Notification hostNotificationUSBDeviceRemoved Apple Internal Keyboard / Trackpad(unseen product name) seqNum 448 Total -1346
+2022-04-29 20:33:38.500|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:34:02.666|INFO|Apple80211Set:10289 Processing APPLE80211_IOC_ROAM
+2022-04-29 20:34:02.666|INFO|Apple80211Set:10303 Processing APPLE80211_IOC_ROAM dataRef:0x7f9f61abb880
+2022-04-29 20:34:02.666|INFO|Apple80211Set:10324 CFType is CFData
+2022-04-29 20:53:55.862|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:53:56.076|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:53:56.080|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:53:56.100|INFO|Usb Host Notification hostNotificationUSBDeviceRemoved Apple Internal Keyboard / Trackpad(unseen product name) seqNum 448 Total -1347
+2022-04-29 20:53:57.150|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:53:57.678|INFO|<airport[227]> -[dpsManager handleDPSEventWithType:eventInfo:networkName:BSSID:channelInfo:isCriticalAppInUse:]_block_invoke: Ignoring non-dps events while not in monitoring period/ Ignoring DPS event while in monitoring period
+2022-04-29 20:53:57.678|INFO|<airport[227]> -[dpsManager handleDPSEventWithType:eventInfo:networkName:BSSID:channelInfo:isCriticalAppInUse:]_block_invoke: Ignoring non-dps events while not in monitoring period/ Ignoring DPS event while in monitoring period
+2022-04-29 20:54:02.531|INFO|<airport[227]> airportdProcessDLILEvent: <en0> event=1, flags=0xFFFF8863, lastPowerPref=on
+2022-04-29 20:54:02.531|INFO|<airport[227]> airportdProcessDLILEvent: en0 marked UP, applying user power preferences (ON).
+2022-04-29 20:54:02.531|INFO|<airport[227]> airportdProcessDLILEvent: <en0> Setting power ON
+2022-04-29 20:54:02.534|ERROR|<airport[227]> _configureTCPKeepAlive: Unable to enable TCP keep-alive on en0 (Operation not supported)
+2022-04-29 20:54:02.553|WARN|<airport[227]> ERROR: rapportd (504) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:54:02.553|WARN|<airport[227]> ERROR: sharingd (602) is not entitled for com.apple.wifi.join_history, will not allow request
+2022-04-29 20:54:26.750|INFO|Apple80211Set:10289 Processing APPLE80211_IOC_ROAM
+2022-04-29 20:54:26.750|INFO|Apple80211Set:10303 Processing APPLE80211_IOC_ROAM dataRef:0x7f9f61ad8ad0
+2022-04-29 20:54:26.750|INFO|Apple80211Set:10324 CFType is CFData

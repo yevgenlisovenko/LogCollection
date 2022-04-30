@@ -2,15 +2,15 @@ package com.yevgen.logcollection.model.request;
 
 public class FilterRequest {
 
-    private FilterType filterType;
+    private FilterType type;
     private String filterString;
 
-    public FilterType getFilterType() {
-        return filterType;
+    public FilterType getType() {
+        return type;
     }
 
-    public void setFilterType(FilterType filterType) {
-        this.filterType = filterType;
+    public void setType(FilterType type) {
+        this.type = type;
     }
 
     public String getFilterString() {
@@ -24,7 +24,7 @@ public class FilterRequest {
     @Override
     public String toString() {
         return "Filter{" +
-                "filterType=" + filterType +
+                "type=" + type +
                 ", filterString='" + filterString + '\'' +
                 '}';
     }
