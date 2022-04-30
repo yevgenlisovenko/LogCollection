@@ -1,7 +1,6 @@
 package com.yevgen.logcollection.api;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.boot.actuate.health.Health;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthController {
 
     @GetMapping
-    public ResponseEntity<String> getStatus() {
-        return new ResponseEntity<>("Service is up and running", HttpStatus.OK);
+    public Health getStatus() {
+        return Health.up().build();
     }
 
 }
