@@ -7,7 +7,7 @@
   Sample log file used for testing you can find [here](https://github.com/yevgenlisovenko/LogCollection/blob/dev/logs/sample.log).
 - Log Collection Service has permissions to read files in the log directory.
 
-#Log Collection Service
+# Log Collection Service
 - The **[service](https://github.com/yevgenlisovenko/LogCollection/tree/dev/log-collection-service)** is written in Java using SpringBoot Framework.
 - The service in current implementation returns list of logs sorted descending by timestamps. Logs are always read from the end of the file (to read the latest logs). User has ability to limit the count of returned logs, as well as filter them using different filters.
 - The service has HTTP endpoint **POST /v1/get-logs** to retrieve logs.\
@@ -71,9 +71,9 @@
   **GET /health**
 - Most of the code in the project follows [SOLID principles](https://en.wikipedia.org/wiki/SOLID), which allows to make sure that the code is understandable, flexible and maintainable.
   
-#Potential enhancements
+# Potential enhancements
 - Logs may have different format. The service can be modified to allow specifying log format via HTTP request.
 - Log files may have multiline logs. For this purpose new implementation of [ILogReader](https://github.com/yevgenlisovenko/LogCollection/blob/dev/log-collection-service/src/main/java/com/yevgen/logcollection/io/logReader/ILogReader.java) can be added to the service.
 
-#Unit testing
+# Unit testing
 - The source code does not have unit tests at the moment (time consuming). But code is written in a way that allows to cover it with unit tests with no issues.
