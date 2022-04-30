@@ -21,7 +21,7 @@ public class LogCollectionController {
     @Autowired
     private ILogCollectionService logCollectionService;
 
-    @PostMapping("/v1/logs")
+    @PostMapping("/v1/get-logs")
     public ResponseEntity<LogCollectionResponse> getLogs(
             @Valid @RequestBody LogCollectionRequest request) {
 
@@ -33,5 +33,7 @@ public class LogCollectionController {
         LogCollectionResponse response = new LogCollectionResponse(logs);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    // TODO Consider adding endpoint which will return list of available log files
 
 }
