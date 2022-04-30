@@ -1,4 +1,3 @@
-# LogCollection
 # Assumptions
 - one log record in log file takes only one line.
 - each log has following format:\
