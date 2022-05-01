@@ -76,4 +76,15 @@
 - Log files may have multiline logs. For this purpose new implementation of [ILogReader](https://github.com/yevgenlisovenko/LogCollection/blob/dev/log-collection-service/src/main/java/com/yevgen/logcollection/io/logReader/ILogReader.java) can be added to the service.
 
 # Unit testing
-- The source code does not have unit tests at the moment (time consuming). But code is written in a way that allows to cover it with unit tests with no issues.
+- Basic scenarios are covered in [LogCollectionServiceTest.java](https://github.com/yevgenlisovenko/LogCollection/blob/dev/log-collection-service/src/test/java/com/yevgen/logcollection/service/LogCollectionServiceTest.java):
+    - testLogCollectionService_FileDoesNotExists
+    - testLogCollectionService_EmptyFile
+    - testLogCollectionService_WithLimit
+    - testLogCollectionService_NoLimit
+    - testLogCollectionService_WithLimitGreaterThanLogsCount
+    - testLogCollectionService_HandleInvalidLogFormat
+    - testLogCollectionService_FilterContains
+    - testLogCollectionService_FilterStartsWith
+    - testLogCollectionService_FilterEndsWith
+    - testLogCollectionService_FilterRegex
+    - testLogCollectionService_FilterLevel

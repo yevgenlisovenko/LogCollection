@@ -1,9 +1,20 @@
 package com.yevgen.logcollection.model.request;
 
+import javax.validation.constraints.NotNull;
+
 public class FilterRequest {
 
     private FilterType type;
+    @NotNull
     private String filterString;
+
+    public FilterRequest() {
+    }
+
+    public FilterRequest(FilterType type, String filterString) {
+        this.type = type;
+        this.filterString = filterString;
+    }
 
     public FilterType getType() {
         return type;

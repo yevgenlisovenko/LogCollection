@@ -34,8 +34,18 @@ public class ReversedLogReader implements ILogReader {
 
     @Override
     public Log readLog() throws IOException {
-        String line = fileReader.readLine();
-        return line == null ? null : parseLine(line);
+        Log log = null;
+        boolean parsedSuccessfully = true;
+        do {
+            String line = fileReader.readLine();
+            if (line == null) {
+                break;
+            }
+            log = parseLine(line);
+            parsedSuccessfully = log != null;
+        }
+        while (!parsedSuccessfully);  // to skip lines which where not parsed successfully
+        return log;
     }
 
     private Log parseLine(String line) {
