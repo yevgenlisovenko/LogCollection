@@ -44,7 +44,7 @@ public class ReversedLogReader implements ILogReader {
             log = parseLine(line);
             parsedSuccessfully = log != null;
         }
-        while (!parsedSuccessfully);  // to skip lines which where not parsed successfully
+        while (!parsedSuccessfully);  // to skip lines which were not parsed successfully
         return log;
     }
 

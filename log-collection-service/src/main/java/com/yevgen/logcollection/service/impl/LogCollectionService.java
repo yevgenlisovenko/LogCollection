@@ -38,6 +38,9 @@ public class LogCollectionService implements ILogCollectionService {
     public List<Log> getLogs(String filename, Integer limit, FilterRequest filterRequest) {
         File file = getFile(filename);
         Predicate<Log> filter = filterRequest != null ? filterFactory.createFilter(filterRequest) : null;
+
+        logger.info("Reading logs from {}", file.getAbsolutePath());
+
         return readFromFile(file, limit, filter);
     }
 
@@ -46,7 +49,6 @@ public class LogCollectionService implements ILogCollectionService {
         if (!file.exists()) {
             throw new FileNotFoundException(filename);
         }
-
         return file;
     }
 

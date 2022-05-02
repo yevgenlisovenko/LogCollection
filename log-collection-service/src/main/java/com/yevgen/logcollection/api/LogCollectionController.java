@@ -4,6 +4,7 @@ import com.yevgen.logcollection.model.Log;
 import com.yevgen.logcollection.model.request.LogCollectionRequest;
 import com.yevgen.logcollection.model.response.LogCollectionResponse;
 import com.yevgen.logcollection.service.ILogCollectionService;
+import com.yevgen.logcollection.service.impl.LogCollectionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,16 @@ import java.util.List;
 @RequestMapping("/")
 public class LogCollectionController {
 
+    private static Logger logger = LoggerFactory.getLogger(LogCollectionController.class);
+
     @Autowired
     private ILogCollectionService logCollectionService;
 
     @PostMapping("/v1/get-logs")
     public ResponseEntity<LogCollectionResponse> getLogs(
             @Valid @RequestBody LogCollectionRequest request) {
+
+        logger.info("{}", request);
 
         List<Log> logs = logCollectionService.getLogs(
                 request.getFilename(),
