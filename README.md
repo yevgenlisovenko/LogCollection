@@ -11,7 +11,7 @@
 # Log Collection Service
 - The **[service](https://github.com/yevgenlisovenko/LogCollection/tree/dev/log-collection-service)** is written in Java using SpringBoot Framework.
 - The service in current implementation returns list of logs sorted descending by timestamps. Logs are always read from the end of the file (to read the latest logs). User has ability to limit the count of returned logs, as well as filter them using different filters.
-- The service has HTTP endpoint **POST /v1/get-logs** to retrieve logs.\
+- The service has HTTP [endpoint](https://github.com/yevgenlisovenko/LogCollection/blob/dev/log-collection-service/src/main/java/com/yevgen/logcollection/api/LogCollectionController.java) **POST /v1/get-logs** to retrieve logs.\
   Example of HTTP request:
   ```
   curl --location --request POST 'http://localhost:8081/v1/get-logs'
