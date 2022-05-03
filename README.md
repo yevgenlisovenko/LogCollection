@@ -10,6 +10,16 @@
 
 # Log Collection Service
 - The **[service](https://github.com/yevgenlisovenko/LogCollection/tree/dev/log-collection-service)** is written in Java using SpringBoot Framework.
+- To build and run the project have:
+  - JDK 11
+  - Apache Maven 3.3+
+  - Docker
+- Instructions to build and run the service:
+  - Make sure you are inside proper directory: `cd log-collection-service`
+  - Build service: `mvn clean install`
+  - Create Docker image: `docker build -t log-collection .`
+  - Run container: `docker run -v /var/log:/logs -p 8081:8080 log-collection`\
+    Note that there is ability to map different directory with logs, not only `/var/log`.
 - The service in current implementation returns list of logs sorted descending by timestamps. Logs are always read from the end of the file (to read the latest logs). User has ability to limit the count of returned logs, as well as filter them using different filters.
 - The service has HTTP [endpoint](https://github.com/yevgenlisovenko/LogCollection/blob/dev/log-collection-service/src/main/java/com/yevgen/logcollection/api/LogCollectionController.java) **POST /v1/get-logs** to retrieve logs.\
   Example of HTTP request:

@@ -46,9 +46,13 @@ public class LogCollectionService implements ILogCollectionService {
 
     private File getFile(String filename) {
         File file = Path.of(path, filename).toFile();
+
+        logger.info("File path {}", file.getAbsolutePath());
+
         if (!file.exists()) {
             throw new FileNotFoundException(filename);
         }
+
         return file;
     }
 
