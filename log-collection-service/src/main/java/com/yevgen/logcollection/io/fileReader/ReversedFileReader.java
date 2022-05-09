@@ -58,7 +58,7 @@ public class ReversedFileReader implements IFileReader {
             int readBytes = randomAccessFile.read(buffer);
             logger.debug("Buffer: {}", new String(buffer));
 
-            // Scan the bytes for EOL (\r\n or \n), where \n - 0xA, \r\n - 0xD.
+            // Scan the bytes for EOL (\r\n or \n), where \n - 0xA, \r - 0xD.
             // Also reposition cursor to the end of next line
             int startOfLine = -1;
             for (int i = readBytes - 1; i >=0; i--) {

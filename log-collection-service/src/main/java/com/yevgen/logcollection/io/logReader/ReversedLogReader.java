@@ -41,7 +41,7 @@ public class ReversedLogReader implements ILogReader {
             if (line == null) {
                 break;
             }
-            log = parseLine(line);
+            log = line.isBlank() ? null : parseLine(line);
             parsedSuccessfully = log != null;
         }
         while (!parsedSuccessfully);  // to skip lines which were not parsed successfully
